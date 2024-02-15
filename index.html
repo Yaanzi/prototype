@@ -4,89 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratory Test Result Analysis</title>
-    <style>
-        /* CSS styles for the page */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            padding: 10px;
-        }
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            padding: 20px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Additional styles for file upload section */
-        .upload-container {
-            max-width: 600px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .upload-btn {
-            display: inline-block;
-            background-color: #23bd2e;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .upload-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
-    <script src="function.js"></script>
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/fade-in-animation.css">
+    <script src="https://cdn.jsdelivr.net/npm/async-ocrad@0.0.2/main.min.js"></script>
 </head>
 <body>
     <header>
         <h1>Laboratory Test Result Analysis</h1>
     </header>
     <nav>
-        <ul>
+        <ul >
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="support.html">Support</a></li>
@@ -96,14 +24,17 @@
     <div class="container">
         <!-- Your main content goes here -->
     </div>
-    <div class="upload-container">
+    <div class="upload-container fade-in-image">
         <h2>Upload Your Laboratory Test Result</h2>
-        <form action="#" method="post" enctype="multipart/form-data">
-            <input type="file" name="fileToUpload" id="fileToUpload" accept=".txt,.pdf,.doc,.docx">
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" id="fileToUpload" accept=".txt,.pdf,.doc,.docx,.png,.jpeg">
             <br><br>
-            <button type="submit" class="upload-btn">Analyze</button>
+            <button type="button" id="analyzeBtn" class="upload-btn">Analyze</button> <!-- Change to type="button" -->
         </form>
     </div>
+
+    <script src="function.js"></script>
+
     <footer>
         <p>&copy; 2024 Laboratory Test Result Analysis</p>
     </footer>

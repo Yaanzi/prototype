@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR Result</title>
+    <!-- Add any necessary CSS styles here -->
+    <style>
+        /* Define your CSS styles for the result page */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>OCR Result</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Extracted Text</h2>
+            <p id="extractedText"></p>
+        </section>
+    </main>
+
+    <script>
+        // Retrieve the extracted text from the URL parameter
+        var urlParams = new URLSearchParams(window.location.search);
+        var extractedText = urlParams.get('text');
+
+        // Display the extracted text on the page
+        var extractedTextElement = document.getElementById('extractedText');
+        extractedTextElement.textContent = extractedText;
+    </script>
+</body>
+</html>
